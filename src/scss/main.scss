@@ -158,3 +158,31 @@ video {
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
 }
+
+// background
+@keyframes animateBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.background {
+  animation-name: animateBackground;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
