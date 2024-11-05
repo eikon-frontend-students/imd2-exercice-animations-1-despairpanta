@@ -186,3 +186,23 @@ video {
   animation-duration: 5s;
   animation-timing-function: linear;
 }
+
+// submit
+
+@keyframes animateSubmit {
+  from {
+    transform: translate(0);
+    opacity: 100%;
+  }
+  to {
+    transform: translate(60px, -60px);
+    opacity: 0%;
+  }
+}
+
+.submit-plane {
+  animation-name: animateSubmit;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
