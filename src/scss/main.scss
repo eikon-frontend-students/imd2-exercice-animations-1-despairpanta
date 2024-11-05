@@ -206,3 +206,64 @@ video {
   animation-duration: 1s;
   animation-timing-function: ease-out;
 }
+
+// pong
+
+@keyframes animatePongBall {
+  0% {
+    transform: translate(-270px, -100px);
+  }
+  50% {
+    transform: translate(270px, 100px);
+  }
+  100% {
+    transform: translate(-270px, -100px);
+  }
+}
+
+.pong-ball {
+  animation-name: animatePongBall;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+}
+
+@keyframes animateLeftPaddle {
+  0% {
+    transform: translateY(-120%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-120%);
+  }
+}
+
+@keyframes animateRightPaddle {
+  0% {
+    transform: translateY(120%);
+  }
+  50% {
+    transform: translateY(-0%);
+  }
+  100% {
+    transform: translateY(120%);
+  }
+}
+
+.pong-paddle:nth-child(1) {
+  animation-name: animateLeftPaddle;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  animation-delay: -2s;
+  animation-timing-function: ease-in;
+}
+
+.pong-paddle:nth-child(3) {
+  animation-name: animateRightPaddle;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease-in;
+}
